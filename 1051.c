@@ -19,6 +19,5 @@ int main() {
         printf("R$ %.2lf\n", IMPOSTO);
     }
 
-
     return 0;
 }
