@@ -1,15 +1,15 @@
  #include <stdio.h>
- #include <stdlib.h>
 
 
 int main() {
     int mTabuleiro[9][9];
-    int n,ni, lin, col, aux, aux2, aux3=0, quad, mAux[n], mAux2[3][3], result=1;
+    int n,ni, lin, col, aux, aux2, aux3=0, quad, mAux[1000], mAux2[3][3], result;
     scanf("%d", &n);
     aux3 = n;
 
 
     while(n>0){
+    result=1;
     for(lin=0; lin <= 8; lin++){
         for(col=0; col <= 8; col++){
             scanf("%d", &mTabuleiro[col][lin]);
@@ -49,10 +49,7 @@ int main() {
                 if(mAux2[lin][col] != 285)result=0;
                 }
             }
-
-
-        if(result==1) mAux[n]=1;
-    else mAux[n]=0;
+    mAux[n]=result;
     n--;
     }
 
